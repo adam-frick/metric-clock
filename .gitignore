@@ -1,0 +1,7 @@
+# compilation extensions
+*.d
+*.o
+*.a
+
+# binary
+metric_clock
