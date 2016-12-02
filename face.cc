@@ -24,7 +24,7 @@ void Face::setShape() {  // sets properties
 void Face::setFace() {  // arranges layout of clock face to show ticks & numbers
     for (unsigned int i = 0; i < ticks.size(); i++) {
         
-        if (!font.loadFromFile("LiberationMono-Regular.ttf")) {
+        if (!font.loadFromFile(Screen::FONT)) {
             std::cout << "Failed to load font" << std::endl;
             exit(EXIT_FAILURE);
         }
@@ -65,7 +65,6 @@ void Face::setFace() {  // arranges layout of clock face to show ticks & numbers
     for (unsigned int i = 0; i < nums.size(); i++) {
         nums.at(i).setFont(font);
         nums.at(i).setFillColor(sf::Color::Black);
-        nums.at(i).setOutlineColor(sf::Color::Black);
         nums.at(i).setCharacterSize(Screen::getMinDim()*0.075);
         
         // sets string of clock number for corresponding hour

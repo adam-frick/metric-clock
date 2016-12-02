@@ -24,17 +24,14 @@ void Hand::setShape() {
         case secID:
             handShape.scale(0.01, 0.40);
             handShape.setFillColor(sf::Color::Red);
-            handShape.setOutlineColor(sf::Color::Red);
             break;
         case minID:
             handShape.scale(0.03, 0.30);
             handShape.setFillColor(sf::Color::Green);
-            handShape.setOutlineColor(sf::Color::Green);
             break;
         case hourID:
             handShape.scale(0.03, 0.35);
             handShape.setFillColor(sf::Color::Blue);
-            handShape.setOutlineColor(sf::Color::Blue);
             break;
     }
     handShape.setOrigin(handShape.getSize().x/2, handShape.getSize().y);

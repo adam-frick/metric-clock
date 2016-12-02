@@ -12,15 +12,14 @@
 #include "metric.hh"
 #include "hand.hh"
 #include "face.hh"
+#include "screen.hh"
 
-
-sf::RenderWindow window(sf::VideoMode(800, 800), "Metric Clock", 
+sf::RenderWindow window(sf::VideoMode(
+        Screen::WIDTH, Screen::HEIGHT), "Metric Clock", 
         sf::Style::Titlebar | sf::Style::Close);
-sf::Clock clockObj;  // "clock" as var name is occupied
+sf::Clock clockObj;
 sf::Time elapsed;
-
 sf::Text timeText;
-
 sf::Font font;
 Face face;
 
@@ -127,11 +126,8 @@ void draw() {
     window.draw(face.face_center);
 }
 
-/* 
- * todo: add font to namespace to use globally instead of multiple instances
- */ 
 void loadFont() {
-    if (!font.loadFromFile("LiberationMono-Regular.ttf")) {
+    if (!font.loadFromFile(Screen::FONT)) {
         std::cout << "Failed to load font" << std::endl;
         exit(EXIT_FAILURE);
     }

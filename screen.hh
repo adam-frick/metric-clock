@@ -8,11 +8,10 @@ namespace Screen {
         HEIGHT,
         WIDTH;
     extern const sf::Vector2f DIM;
+    extern const char * const FONT;
     
     extern sf::Vector2f getCenter();
     extern unsigned short getMinDim();
 }
 
-
 #endif
-
